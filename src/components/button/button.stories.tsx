@@ -2,8 +2,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './button';
 
 const meta = {
+  title: 'Components/Button',
   component: Button,
   args: {
+    children: 'Button',
+  },
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+    }
   }
 }   satisfies Meta;
 
@@ -27,4 +34,22 @@ export const Destructive : Story = {
   args: {
     variant: 'destructive',
   },
+}
+
+export const Small : Story = {
+  args: {
+    size: 'small',
+  }
+}
+
+export const Medium : Story = {
+  args: {
+    size: 'medium',
+  }
+}
+
+export const Large : Story = {
+  args: {
+    size: 'large',
+  }
 }
